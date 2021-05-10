@@ -5,6 +5,7 @@ export const iconPacks = [
         name: 'bootstrap',
         url: 'https://icons.getbootstrap.com',
         version: versions['bootstrap-icons'],
+        package: 'bootstrap-icons',
         license: {
             title: 'MIT',
             url: 'https://github.com/twbs/icons/blob/main/LICENSE.md'
@@ -23,6 +24,7 @@ export const iconPacks = [
         name: 'coreui',
         url: 'https://icons.coreui.io',
         version: versions['@coreui/icons'],
+        package: '@coreui/icons',
         license: {
             title: 'CC BY 4.0',
             url: 'https://github.com/coreui/coreui-icons/blob/master/LICENSE'
@@ -59,6 +61,7 @@ export const iconPacks = [
         name: 'cryptocurrency',
         url: 'http://cryptoicons.co',
         version: versions['cryptocurrency-icons'],
+        package: 'cryptocurrency-icons',
         license: {
             title: 'CC0 1.0 Universal',
             url: 'https://github.com/coreui/coreui-icons/blob/master/LICENSE'
@@ -95,6 +98,7 @@ export const iconPacks = [
         name: 'fontawesome',
         url: 'https://fontawesome.com',
         version: versions['@fortawesome/fontawesome-free'],
+        package: '@fortawesome/fontawesome-free',
         license: {
             title: 'CC BY 4.0',
             url: 'https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt'
@@ -131,6 +135,7 @@ export const iconPacks = [
         name: 'flat-color',
         url: 'https://icons8.github.io/flat-color-icons/',
         version: versions['flat-color-icons'],
+        package: 'flat-color-icons',
         license: {
             title: 'MIT / Good Boy',
             url: 'https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md'
@@ -149,6 +154,7 @@ export const iconPacks = [
         name: 'flag',
         url: 'https://flagicons.lipis.dev',
         version: versions['flag-icon-css'],
+        package: 'flag-icon-css',
         license: {
             title: 'MIT',
             url: 'https://github.com/lipis/flag-icon-css/blob/master/LICENSE'
@@ -177,6 +183,7 @@ export const iconPacks = [
         name: 'heroicons',
         url: 'https://heroicons.com',
         version: versions['heroicons'],
+        package: 'heroicons',
         license: {
             title: 'MIT',
             url: 'https://github.com/tailwindlabs/heroicons/blob/master/LICENSE'
@@ -204,7 +211,8 @@ export const iconPacks = [
         title: 'Inkline',
         name: 'inkline',
         url: 'https://inkline.io',
-        version: versions['inkline'],
+        version: versions['@inkline/icons'],
+        package: '@inkline/icons',
         license: {
             title: 'MIT',
             url: 'https://github.com/inkline/inkline/blob/master/packages/inkline/LICENSE'
@@ -214,7 +222,7 @@ export const iconPacks = [
                 prefix: 'ink',
                 path: '../src/assets',
                 fill: true,
-                import: '@inkline/inkline/src/assets/icons',
+                import: '@inkline/icons/src/assets',
                 icon: (basename) => `ink-${basename}`,
             }
         ]
@@ -224,6 +232,7 @@ export const iconPacks = [
         name: 'ionicons',
         url: 'https://ionicons.com',
         version: versions['ionicons'],
+        package: 'ionicons',
         license: {
             title: 'MIT',
             url: 'https://github.com/ionic-team/ionicons/blob/master/LICENSE'
@@ -242,6 +251,7 @@ export const iconPacks = [
         name: 'lineawesome',
         url: 'https://icons8.com/line-awesome',
         version: versions['line-awesome'],
+        package: 'line-awesome',
         license: {
             title: 'MIT',
             url: 'https://github.com/icons8/line-awesome/blob/master/LICENSE.md'
@@ -260,6 +270,7 @@ export const iconPacks = [
         name: 'material-design',
         url: 'https://fonts.google.com/icons',
         version: versions['material-design-icons'],
+        package: 'material-design-icons',
         license: {
             title: 'Apache 2.0',
             url: 'https://github.com/google/material-design-icons/blob/master/LICENSE'
@@ -279,6 +290,7 @@ export const iconPacks = [
         name: 'octicons',
         url: 'https://primer.style/octicons',
         version: versions['@primer/octicons'],
+        package: '@primer/octicons',
         license: {
             title: 'MIT',
             url: 'https://github.com/primer/octicons/blob/master/LICENSE'
@@ -297,6 +309,7 @@ export const iconPacks = [
         name: 'pixelart',
         url: 'https://pixelarticons.com',
         version: versions['pixelarticons'],
+        package: 'pixelarticons',
         license: {
             title: 'MIT',
             url: 'https://github.com/halfmage/pixelarticons/blob/master/LICENSE'
@@ -315,6 +328,7 @@ export const iconPacks = [
         name: 'prime',
         url: 'http://primefaces.org/showcase/icons.xhtml',
         version: versions['primeicons'],
+        package: 'primeicons',
         license: {
             title: 'MIT',
             url: 'https://github.com/primefaces/primeicons/blob/master/LICENSE'
@@ -333,6 +347,7 @@ export const iconPacks = [
         name: 'remix',
         url: 'https://remixicon.com',
         version: versions['remixicon'],
+        package: 'remixicon',
         license: {
             title: 'Apache 2.0',
             url: 'https://github.com/Remix-Design/RemixIcon/blob/master/License'
@@ -351,6 +366,7 @@ export const iconPacks = [
         name: 'simple',
         url: 'https://simpleicons.org',
         version: versions['simple-icons'],
+        package: 'simple-icons',
         license: {
             title: 'CC0 1.0 Universal',
             url: 'https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md'

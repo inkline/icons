@@ -1,4 +1,6 @@
 import { VNode } from 'vue';
+import { INode as Svg } from 'svgson';
+export declare const renderChildren: (children: Svg[]) => (VNode | string)[];
 declare const _default: import("vue").DefineComponent<{
     /**
      * @description The icon to be displayed

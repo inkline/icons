@@ -3,6 +3,7 @@ interface IconPack {
     name: string;
     url: string;
     version: string;
+    package: string;
     license: {
         title: string;
         url: string;

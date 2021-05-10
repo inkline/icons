@@ -1,7 +1,7 @@
 import { h, computed, defineComponent, onMounted } from 'vue';
 import { IconController } from "../../controllers";
 import { toCamelCase } from '../../helpers';
-const renderChildren = (children) => children
+export const renderChildren = (children) => children
     .map((child) => child.type === 'element'
     ? h(child.name, child.attributes, renderChildren(child.children || []))
     : child.value);
