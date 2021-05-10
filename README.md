@@ -24,10 +24,10 @@
     <a href="https://www.npmjs.com/package/@inkline/icons">
         <img src="https://img.shields.io/npm/v/@inkline/icons.svg" alt="npm version">
     </a>
-    <a href="https://github.com/inkline/icons/actions">
+    <!--a href="https://github.com/inkline/icons/actions">
         <img src="https://github.com/inkline/icons/workflows/Build/badge.svg" alt="Build">
-    </a>
-    <a href='https://coveralls.io/github/inkline/icons?branch=master'><img src='https://coveralls.io/repos/github/inkline/icons/badge.svg?branch=master' alt='Coverage Status' /></a>
+    </a-->
+    <!--a href='https://coveralls.io/github/inkline/icons?branch=master'><img src='https://coveralls.io/repos/github/inkline/icons/badge.svg?branch=master' alt='Coverage Status' /></a-->
     <a href="https://www.npmjs.com/package/@inkline/icons">
         <img src="https://img.shields.io/npm/dm/@inkline/icons.svg" alt="Downloads">
     </a>
