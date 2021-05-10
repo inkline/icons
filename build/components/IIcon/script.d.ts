@@ -1,6 +1,3 @@
-import { VNode } from 'vue';
-import { INode as Svg } from 'svgson';
-export declare const renderChildren: (children: Svg[]) => (VNode | string)[];
 declare const _default: import("vue").DefineComponent<{
     /**
      * @description The icon to be displayed
@@ -20,7 +17,7 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-}, () => VNode<import("vue").RendererNode, import("vue").RendererElement, {
+}, () => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
     [key: string]: any;
 }>, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<{
     name: string;

@@ -1,10 +1,6 @@
 import { h, computed, defineComponent, onMounted } from 'vue';
-import { IconController } from "../../controllers";
-import { toCamelCase } from '../../helpers';
-export const renderChildren = (children) => children
-    .map((child) => child.type === 'element'
-    ? h(child.name, child.attributes, renderChildren(child.children || []))
-    : child.value);
+import { IconController } from '../../controllers';
+import { renderChildren, toCamelCase } from '../../helpers';
 export default defineComponent({
     name: 'IIcon',
     props: {
@@ -35,7 +31,7 @@ export default defineComponent({
             [`-${props.size}`]: Boolean(props.size)
         }));
         onMounted(() => {
-            if (!IconController.icons[iconName.value]) {
+            if (iconName.value && !IconController.icons[iconName.value]) {
                 throw new Error(`The icon ${iconName.value} is not registered.`);
             }
         });

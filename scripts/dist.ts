@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import { build } from 'vite';
+import { toCamelCase } from '../src/helpers';
 import { iconPacks } from '../src/config';
 import config from '../vite.packs.config';
 
@@ -11,9 +12,10 @@ import config from '../vite.packs.config';
             ? resolve(__dirname, '..', 'src', 'packs', iconPack.name, 'index.ts')
             : resolve(__dirname, '..', 'src', 'packs', iconPack.name);
         const iconPackFileName = hasMultipleVariants ? `packs/${iconPack.name}/[name]` : 'packs/[name]';
+        const iconPackLibraryName = `${iconPackName}-icons`;
 
         await build(config({
-            name: iconPackName,
+            name: iconPackLibraryName,
             entry: iconPackEntry,
             fileName: iconPackFileName
         }));
@@ -23,9 +25,10 @@ import config from '../vite.packs.config';
                 const iconPackVariantName = iconPackVariant.name as string;
                 const iconPackVariantEntry = resolve(__dirname, '..', 'src', 'packs', iconPack.name, `${iconPackVariant.name}.ts`);
                 const iconPackVariantFileName = `packs/${iconPack.name}/[name]`;
+                const iconPackVariantLibraryName = `${iconPackName}-${iconPackVariantName}-icons`;
 
                 await build(config({
-                    name: iconPackVariantName,
+                    name: iconPackVariantLibraryName,
                     entry: iconPackVariantEntry,
                     fileName: iconPackVariantFileName
                 }));
