@@ -99,10 +99,29 @@ app.mount('#app');
 ~~~
 
 ## Usage
-Using `@inkline/icons` is very straightforward:
+
+### Component
+Using `@inkline/icons` is very straightforward. Simply specify the imported icon name:
 
 ```html
 <i-icon name="fa-check" />
+```
+
+### Scss
+You can also import the icons as data svg scss variables and use them as masks:
+
+```scss
+@import '@inkline/icons/packs/inkline.scss';
+
+.icon {
+    width: 16px;
+    height: 16px;
+    mask-size: 16px 16px;
+    mask-image: url($ink-chevron-down);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    background-color: black;
+}
 ```
 
 ## Bugs and feature requests

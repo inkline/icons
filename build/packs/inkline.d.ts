@@ -3,7 +3,7 @@
  *
  * @name inkline
  * @url https://inkline.io
- * @version 1.2.0
+ * @version 1.2.1
  * @generated
  */
 import { Svg } from '../types';
