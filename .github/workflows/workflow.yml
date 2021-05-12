@@ -16,6 +16,7 @@ jobs:
                     node-version: '14'
             -   name: Install dependencies
                 run: npm install
+                shell: bash
             -   name: Run tests
                 run: npm run test
             -   uses: codecov/codecov-action@v1
