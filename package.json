@@ -1,7 +1,7 @@
 {
   "name": "@inkline/icons",
   "description": "Inkline Icons provides you with an awesome, maintainable Universal Vue.js 3 Icon Component with thousands of icons from more than 15 icon packs.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "build/index.js",
   "module": "./build/index.js",
   "exports": {
@@ -12,17 +12,17 @@
       "style": "./dist/style.css",
       "default": "./build/icons.js"
     },
+    "./": {
+      "import": "./build/",
+      "require": "./dist/",
+      "sass": "./build/",
+      "default": "./build/"
+    },
     "./packs": {
       "import": "./build/packs/index.js",
       "require": "./dist/packs/index.js",
       "sass": "./build/packs/index.scss",
       "default": "./build/packs/index.js"
-    },
-    "./packs/": {
-      "import": "./build/packs/",
-      "require": "./dist/packs/",
-      "sass": "./build/packs/",
-      "default": "./build/packs/"
     },
     "./components": {
       "import": "./build/components/index.js"
@@ -102,7 +102,6 @@
     "vue-tsc": "^0.0.24"
   },
   "files": [
-    "src",
     "build",
     "dist",
     "scripts",

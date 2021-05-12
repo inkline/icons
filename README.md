@@ -43,6 +43,7 @@
 - [Installation](#installation)
 - [Integration](#integration)
 - [Usage](#usage)
+- [Packs](#packs)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
 - [Community](#community)
@@ -127,6 +128,12 @@ You can also import the icons as data svg scss variables and use them as masks:
     background-color: black;
 }
 ```
+
+## Packs
+There are over 15 available free icon packs, and even more will be added in the future.
+
+- 
+
 
 ## Bugs and feature requests
 Have a bug or a feature request? Please first search for existing and closed issues.
