@@ -132,7 +132,7 @@ You can also import the icons as data svg scss variables and use them as masks:
 ## Packs
 There are over 15 available free icon packs, and even more will be added in the future.
 
-- 
+
 
 
 ## Bugs and feature requests
