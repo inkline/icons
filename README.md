@@ -24,17 +24,17 @@
     <a href="https://www.npmjs.com/package/@inkline/icons">
         <img src="https://img.shields.io/npm/v/@inkline/icons.svg" alt="npm version">
     </a>
-    <!--a href="https://github.com/inkline/icons/actions">
-        <img src="https://github.com/inkline/icons/workflows/Build/badge.svg" alt="Build">
-    </a-->
-    <!--a href='https://coveralls.io/github/inkline/icons?branch=master'><img src='https://coveralls.io/repos/github/inkline/icons/badge.svg?branch=master' alt='Coverage Status' /></a-->
+    <a href="https://github.com/inkline/icons/actions/workflows/workflow.yml">
+        <img src="https://github.com/inkline/icons/actions/workflows/workflow.yml/badge.svg" alt="Build">
+    </a>
+    <a href='https://codecov.io/gh/inkline/icons'><img src='https://codecov.io/gh/inkline/icons/branch/master/graph/badge.svg?token=C4PI2D5CAF' alt='Coverage Status' /></a>
     <a href="https://www.npmjs.com/package/@inkline/icons">
         <img src="https://img.shields.io/npm/dm/@inkline/icons.svg" alt="Downloads">
     </a>
     <a href="https://discord.gg/2w5UGnK">
         <img src="https://img.shields.io/discord/550436704482492429.svg" alt="Discord">
     </a>
-</a>
+</p>
 
 <br/>
 <br/>
