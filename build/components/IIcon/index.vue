@@ -1,2 +1,2 @@
-<script src="./script" />
+<script src="./script.js" />
 <style src="./style.scss" lang="scss" />
