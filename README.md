@@ -41,6 +41,7 @@
 
 ## Table of contents
 - [Installation](#installation)
+- [Integration](#integration)
 - [Usage](#usage)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
@@ -60,6 +61,8 @@ npm install @inkline/icons
 ~~~
 
 ## Integration
+
+You can either import and register individual icons from the packs available to take advantage of tree-shaking, or you can import and register icon packs as a whole.
 
 ### Importing individual icons (tree-shaking)
 
@@ -99,6 +102,7 @@ app.mount('#app');
 ~~~
 
 ## Usage
+Icons are available to be used by constructing SVGs using the Universal Vue.js 3 Icon Component or as a CSS mask, perfect for any use case.
 
 ### Component
 Using `@inkline/icons` is very straightforward. Simply specify the imported icon name:
