@@ -4,7 +4,7 @@ import { iconPacks } from '../src/config';
 
 const packageJSON = require(resolve(__dirname, '..', 'package.json'));
 
-packageJSON.devDependencies['@inkline/icons'] = packageJSON.version;
+packageJSON.devDependencies['@inkline/icons'] = packageJSON.iconsVersion;
 
 const packages = iconPacks.reduce((acc: { [key: string]: string }, iconPack) => {
     acc[iconPack.package] = packageJSON.devDependencies[iconPack.package];
