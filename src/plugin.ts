@@ -25,6 +25,8 @@ export const InklineIcons: InklineIconsPlugin = {
             ...options
         };
 
+        app.provide('inklineIcons', IconController);
+
         if (options.registerComponent) {
             app.component(IIcon.name, IIcon);
         }

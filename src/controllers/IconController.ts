@@ -1,6 +1,6 @@
 import { INode as Svg } from "svgson";
 
-interface IIconController {
+export interface IIconController {
     icons: { [key: string]: Svg };
     add(name: string, icon: Svg): void;
     addMultiple(icons: { [key: string]: Svg }): void;
