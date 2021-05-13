@@ -64,6 +64,7 @@
     "simple-icons": "4.21.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.19.0",
     "svgson": "^5.2.1",
     "ts-jest": "^26.5.6",
     "ts-node": "^9.1.1",
