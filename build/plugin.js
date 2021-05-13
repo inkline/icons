@@ -12,6 +12,7 @@ export const InklineIcons = {
             ...defaultOptions,
             ...options
         };
+        app.provide('inklineIcons', IconController);
         if (options.registerComponent) {
             app.component(IIcon.name, IIcon);
         }

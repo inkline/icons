@@ -9,6 +9,11 @@ describe('components', () => {
    describe('IIcon', () => {
        it('should render correctly', () => {
            const wrapper = shallowMount(IIcon, {
+               global: {
+                   provide: {
+                       inklineIcons: IconController
+                   }
+               },
                props: {
                    name: 'icon'
                }
@@ -19,6 +24,11 @@ describe('components', () => {
 
        it('should not render if specified icon does not exist', () => {
            expect(() => shallowMount(IIcon, {
+               global: {
+                   provide: {
+                       inklineIcons: IconController
+                   }
+               },
                props: {
                    name: 'doesnotexist'
                }

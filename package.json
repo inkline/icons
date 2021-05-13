@@ -19,7 +19,8 @@
     "generate:icons": "node -r esbuild-register scripts/generate.ts",
     "generate": "npm run generate:version && npm run generate:icons",
     "prepublishOnly": "npm run build",
-    "test": "jest"
+    "test": "jest",
+    "test:dev": "jest --watch"
   },
   "peerDependencies": {
     "vue": "^3.0.5"

@@ -1,5 +1,4 @@
-import { h, computed, defineComponent, onMounted } from 'vue';
-import { IconController } from '../../controllers';
+import { h, inject, computed, defineComponent, onMounted } from 'vue';
 import { renderChildren, toCamelCase } from '../../helpers';
 export default defineComponent({
     name: 'IIcon',
@@ -24,14 +23,17 @@ export default defineComponent({
         }
     },
     setup(props) {
+        const controller = inject('inklineIcons', {
+            icons: {}
+        });
         const iconName = computed(() => toCamelCase(props.name));
-        const icon = computed(() => IconController.icons[iconName.value]);
+        const icon = computed(() => controller.icons[iconName.value]);
         const classes = computed(() => ({
             'inkline-icon': true,
             [`-${props.size}`]: Boolean(props.size)
         }));
         onMounted(() => {
-            if (iconName.value && !IconController.icons[iconName.value]) {
+            if (iconName.value && !controller.icons[iconName.value]) {
                 throw new Error(`The icon ${iconName.value} is not registered.`);
             }
         });
