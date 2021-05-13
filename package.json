@@ -189,7 +189,7 @@
     "generate:version": "node -r esbuild-register scripts/version.ts",
     "generate:icons": "node -r esbuild-register scripts/generate.ts",
     "generate": "npm run generate:version && npm run generate:icons",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "peerDependencies": {
