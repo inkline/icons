@@ -1,7 +1,6 @@
 import { Plugin } from 'vue';
-import { Svg } from './types';
 export interface PluginOptions {
-    [key: string]: Svg;
+    registerComponent?: boolean;
 }
 export declare const InklineIcons: Plugin;
 export default InklineIcons;

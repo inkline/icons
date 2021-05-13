@@ -4,17 +4,27 @@ import { Svg } from './types';
 import { IIcon } from "./components";
 
 export interface PluginOptions {
-    [key: string]: Svg;
+    registerComponent?: boolean;
 }
 
-export const InklineIcons: Plugin = {
-    install(app, options: PluginOptions = {}) {
-        app.component(IIcon.name, IIcon);
-
-        Object.keys(options).forEach((iconName: string) => {
-            IconController.add(iconName, options[iconName]);
-        });
-    }
+const defaultOptions = {
+    registerComponent: true
 };
+
+export const InklineIcons: Plugin = {
+    add(icons: { [key: string]: Svg }) {
+        IconController.addMultiple(icons);
+    },
+    install(app, options: PluginOptions = {}) {
+        options = {
+            ...defaultOptions,
+            ...options
+        };
+
+        if (options.registerComponent) {
+            app.component(IIcon.name, IIcon);
+        }
+    }
+} as Plugin;
 
 export default InklineIcons;

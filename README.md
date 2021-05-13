@@ -75,11 +75,12 @@ import App from './App.vue';
 
 const app = createApp(App);
 
-app.use(InklineIcons, {
+InklineIcons.add({
     faCheck,
     faHome
-});
+})
 
+app.use(InklineIcons);
 app.mount('#app');
 ~~~
 
@@ -94,11 +95,12 @@ import App from './App.vue';
 
 const app = createApp(App);
 
-app.use(InklineIcons, {
+InklineIcons.add({
     ...fontAwesomeIcons,
     ...materialDesignIcons
 });
 
+app.use(InklineIcons);
 app.mount('#app');
 ~~~
 
