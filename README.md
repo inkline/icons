@@ -41,7 +41,6 @@
 
 ## Table of contents
 - [Installation](#installation)
-- [Integration](#integration)
 - [Usage](#usage)
 - [Packs](#packs)
 - [Bugs and feature requests](#bugs-and-feature-requests)
@@ -61,11 +60,10 @@ To install the package standalone:
 npm install @inkline/icons
 ~~~
 
-## Integration
-
-You can either import and register individual icons from the packs available to take advantage of tree-shaking, or you can import and register icon packs as a whole.
+Next, you can either import and register individual icons, or you can import and register icon packs as a whole.
 
 ### Importing individual icons (tree-shaking)
+This approach allows you to select the icons you want to register individually, resulting in a smaller bundle size.
 
 ~~~js
 import { createApp } from 'vue';
@@ -84,6 +82,7 @@ app.mount('#app');
 ~~~
 
 ### Importing icon packs
+This approach allows you to register icon packs as a whole, best suited for saving time when prototyping your application.
 
 ~~~js
 import { createApp } from 'vue';
