@@ -1,17 +1,21 @@
 import { INode as Svg } from "svgson";
 
-export class IconController {
-    static icons: { [key: string]: Svg } = {};
+interface IIconController {
+    icons: { [key: string]: Svg };
+    add(name: string, icon: Svg): void;
+    addMultiple(icons: { [key: string]: Svg }): void;
+}
 
-    static add(name: string, icon: Svg): void {
+export const IconController: IIconController = {
+    icons: {},
+    add(name, icon) {
         IconController.icons[name] = icon;
-    }
-
-    static addMultiple(icons: { [key: string]: Svg }): void {
+    },
+    addMultiple(icons) {
         Object.keys(icons).forEach((iconName) => {
             IconController.icons[iconName] = icons[iconName];
         });
     }
-}
+};
 
 export default IconController;
