@@ -6,7 +6,7 @@ export const versions = {
     "flat-color-icons": "1.1.0",
     "flag-icon-css": "3.5.0",
     heroicons: "1.0.1",
-    "@inkline/icons": "1.3.0",
+    "@inkline/icons": "1.3.1",
     ionicons: "5.5.1",
     "line-awesome": "1.3.0",
     "material-design-icons": "3.0.1",
