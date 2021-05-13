@@ -3,19 +3,23 @@ import { IconController } from "./controllers";
 import { Svg } from './types';
 import { IIcon } from "./components";
 
+export type InklineIconsPlugin = Plugin & {
+    add(icons: { [key: string]: Svg }): void;
+};
+
 export interface PluginOptions {
     registerComponent?: boolean;
 }
 
-const defaultOptions = {
+const defaultOptions: PluginOptions = {
     registerComponent: true
 };
 
-export const InklineIcons: Plugin = {
-    add(icons: { [key: string]: Svg }) {
+export const InklineIcons: InklineIconsPlugin = {
+    add(icons) {
         IconController.addMultiple(icons);
     },
-    install(app, options: PluginOptions = {}) {
+    install(app, options= {}) {
         options = {
             ...defaultOptions,
             ...options
@@ -25,6 +29,6 @@ export const InklineIcons: Plugin = {
             app.component(IIcon.name, IIcon);
         }
     }
-} as Plugin;
+};
 
 export default InklineIcons;
