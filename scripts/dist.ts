@@ -1,6 +1,5 @@
 import { resolve } from 'path';
 import { build } from 'vite';
-import { toCamelCase } from '../src/helpers';
 import { iconPacks } from '../src/config';
 import config from '../vite.packs.config';
 
