@@ -73,4 +73,4 @@ iconPacks.forEach((iconPack) => {
 
 packageJSON.exports = exportsMap;
 
-writeFileSync(packageJSONPath, JSON.stringify(packageJSON, null, 4));
+writeFileSync(packageJSONPath, JSON.stringify(packageJSON, null, 4) + '\n');
