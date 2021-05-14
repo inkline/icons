@@ -87,8 +87,8 @@ This approach allows you to register icon packs as a whole, best suited for savi
 ~~~js
 import { createApp } from 'vue';
 import { InklineIcons } from '@inkline/icons';
-import * as fontAwesomeIcons from '@inkline/icons/build/packs/fontawesome';
-import * as materialDesignIcons from '@inkline/icons/build/packs/material-design';
+import * as fontAwesomeIcons from '@inkline/icons/packs/fontawesome';
+import * as materialDesignIcons from '@inkline/icons/packs/material-design';
 import App from './App.vue';
 
 const app = createApp(App);
@@ -116,7 +116,7 @@ Using `@inkline/icons` is very straightforward. Simply specify the imported icon
 You can also import the icons as data svg scss variables and use them as masks:
 
 ```scss
-@import '~@inkline/icons/build/packs/inkline.scss';
+@import '~@inkline/icons/packs/inkline.scss';
 
 .icon {
     width: 16px;
