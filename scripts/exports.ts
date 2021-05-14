@@ -22,6 +22,10 @@ const exportsMap: {
         import: './build/packs/index.js',
         sass: './build/packs/index.scss'
     },
+    './packs/': {
+        import: './build/packs/',
+        sass: './build/packs/'
+    },
     './components': {
         import: './build/components/index.js',
         sass: './build/components/index.scss'
