@@ -18,6 +18,15 @@ const exportsMap: {
         sass: './build/index.scss',
         style: './dist/style.css',
     },
+    './config': {
+        import: './build/config.js'
+    },
+    './version': {
+        import: './build/version.js'
+    },
+    './plugin': {
+        import: './build/plugin.js'
+    },
     './packs': {
         import: './build/packs/index.js',
         sass: './build/packs/index.scss'
