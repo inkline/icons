@@ -6,7 +6,19 @@ import { IconController } from "../../src/controllers";
 IconController.add('icon', inkCheck);
 
 describe('components', () => {
-   describe('IIcon', () => {
+    describe('IIcon', () => {
+        const consoleError = console.error;
+        const mockedConsoleError = jest.fn();
+
+        beforeEach(() => {
+            console.error = mockedConsoleError;
+        });
+
+        afterEach(() => {
+            console.error = consoleError;
+        });
+
+
        it('should render correctly', () => {
            const wrapper = shallowMount(IIcon, {
                global: {
@@ -23,7 +35,7 @@ describe('components', () => {
        });
 
        it('should not render if specified icon does not exist', () => {
-           expect(() => shallowMount(IIcon, {
+           shallowMount(IIcon, {
                global: {
                    provide: {
                        inklineIcons: IconController
@@ -32,7 +44,9 @@ describe('components', () => {
                props: {
                    name: 'doesnotexist'
                }
-           })).toThrowError();
+           });
+
+           expect(mockedConsoleError).toHaveBeenCalledWith('The icon doesnotexist is not registered.');
        });
    });
 });

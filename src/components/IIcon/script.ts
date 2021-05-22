@@ -38,7 +38,7 @@ export default defineComponent({
 
         onMounted(() => {
             if (iconName.value && !controller.icons[iconName.value]) {
-                throw new Error(`The icon ${iconName.value} is not registered.`)
+                console.error(`The icon ${iconName.value} is not registered.`)
             }
         });
 
