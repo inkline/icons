@@ -13,59 +13,59 @@ const exportsMap: {
     }
 } = {
     '.': {
-        import: './build/index.js',
+        import: './lib/index.js',
         require: './dist/icons.umd.js',
-        sass: './build/index.scss',
+        sass: './lib/index.scss',
         style: './dist/style.css',
     },
     './config': {
-        import: './build/config.js'
+        import: './lib/config.js'
     },
     './version': {
-        import: './build/version.js'
+        import: './lib/version.js'
     },
     './plugin': {
-        import: './build/plugin.js'
+        import: './lib/plugin.js'
     },
     './packs': {
-        import: './build/packs/index.js',
-        sass: './build/packs/index.scss'
+        import: './lib/packs/index.js',
+        sass: './lib/packs/index.scss'
     },
     './packs/': {
-        import: './build/packs/',
-        sass: './build/packs/'
+        import: './lib/packs/',
+        sass: './lib/packs/'
     },
     './components': {
-        import: './build/components/index.js',
-        sass: './build/components/index.scss'
+        import: './lib/components/index.js',
+        sass: './lib/components/index.scss'
     },
     './controllers': {
-        import: './build/controllers/index.js'
+        import: './lib/controllers/index.js'
     },
     './helpers': {
-        import: './build/helpers/index.js'
+        import: './lib/helpers/index.js'
     }
 };
 
 iconPacks.forEach((iconPack) => {
     if (iconPack.variants.length === 1) {
         exportsMap[`./packs/${iconPack.name}`] = {
-            import: `./build/packs/${iconPack.name}.js`,
+            import: `./lib/packs/${iconPack.name}.js`,
             require: `./dist/packs/${iconPack.name}.umd.js`,
-            sass: `./build/packs/${iconPack.name}.scss`
+            sass: `./lib/packs/${iconPack.name}.scss`
         };
     } else {
         exportsMap[`./packs/${iconPack.name}`] = {
-            import: `./build/packs/${iconPack.name}/index.js`,
+            import: `./lib/packs/${iconPack.name}/index.js`,
             require: `./dist/packs/${iconPack.name}/index.umd.js`,
-            sass: `./build/packs/${iconPack.name}/index.scss`
+            sass: `./lib/packs/${iconPack.name}/index.scss`
         };
 
         iconPack.variants.forEach((iconPackVariant) => {
             exportsMap[`./packs/${iconPack.name}/${iconPackVariant.name}`] = {
-                import: `./build/packs/${iconPack.name}/${iconPackVariant.name}.js`,
+                import: `./lib/packs/${iconPack.name}/${iconPackVariant.name}.js`,
                 require: `./dist/packs/${iconPack.name}/${iconPackVariant.name}.umd.js`,
-                sass: `./build/packs/${iconPack.name}/${iconPackVariant.name}.scss`
+                sass: `./lib/packs/${iconPack.name}/${iconPackVariant.name}.scss`
             };
         });
     }
