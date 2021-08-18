@@ -76,7 +76,7 @@
         "vue-tsc": "^0.0.24"
     },
     "files": [
-        "build",
+        "lib",
         "dist",
         "src",
         "scripts",
