@@ -136,124 +136,124 @@ There are over 15 available free icon packs, and even more will be added in the 
 -   License: [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)<br/>
 -   Variants:
     -   Prefix: `bi`  <br/>
-        Import: `@inkline/icons/build/packs/bootstrap`
+        Import: `@inkline/icons/packs/bootstrap`
     
 [**CoreUI Icons**](https://icons.coreui.io/)<br/>
 -   License: [CC BY 4.0](https://github.com/coreui/coreui-icons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `cib` <br/>
-        Import: `@inkline/icons/build/packs/coreui/brands`
+        Import: `@inkline/icons/packs/coreui/brands`
     -   Prefix: `cif` <br/>
-        Import: `@inkline/icons/build/packs/coreui/flag`
+        Import: `@inkline/icons/packs/coreui/flag`
     -   Prefix: `cil` <br/>
-        Import: `@inkline/icons/build/packs/coreui/linear`
+        Import: `@inkline/icons/packs/coreui/linear`
     -   Prefix: `*` <br/>
-        Import: `@inkline/icons/build/packs/coreui`
+        Import: `@inkline/icons/packs/coreui`
 
 [**CryptoCurrency Icons**](http://cryptoicons.co/)<br/>
 -   License: [CC0 1.0 Universal](https://github.com/coreui/coreui-icons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `cc` <br/>
-        Import: `@inkline/icons/build/packs/cryptocurrency/regular`
+        Import: `@inkline/icons/packs/cryptocurrency/regular`
     -   Prefix: `ccc` <br/>
-        Import: `@inkline/icons/build/packs/cryptocurrency/color`
+        Import: `@inkline/icons/packs/cryptocurrency/color`
     -   Prefix: `cci` <br/>
-        Import: `@inkline/icons/build/packs/cryptocurrency/icon`
+        Import: `@inkline/icons/packs/cryptocurrency/icon`
     -   Prefix: `*` <br/>
-        Import: `@inkline/icons/build/packs/cryptocurrency`
+        Import: `@inkline/icons/packs/cryptocurrency`
 
 
 [**FontAwesome Icons**](https://fontawesome.com/)<br/>
 -   License: [CC BY 4.0](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)<br/>
 -   Variants:
     -   Prefix: `fab` <br/>
-        Import: `@inkline/icons/build/packs/fontawesome/brands`
+        Import: `@inkline/icons/packs/fontawesome/brands`
     -   Prefix: `far` <br/>
-        Import: `@inkline/icons/build/packs/fontawesome/regular`
+        Import: `@inkline/icons/packs/fontawesome/regular`
     -   Prefix: `fas` <br/>
-        Import: `@inkline/icons/build/packs/fontawesome/solid`
+        Import: `@inkline/icons/packs/fontawesome/solid`
     -   Prefix: `*` <br/>
-        Import: `@inkline/icons/build/packs/fontawesome`
+        Import: `@inkline/icons/packs/fontawesome`
 
 [**Flat Color Icons**](https://icons8.github.io/flat-color-icons/)<br/>
 -   License: [MIT / Good Boy](https://github.com/icons8/flat-color-icons/blob/master/LICENSE.md)<br/>
 -   Variants:
     -   Prefix: `fc` <br/>
-        Import: `@inkline/icons/build/packs/flat-color`
+        Import: `@inkline/icons/packs/flat-color`
 
 [**Flag Icons**](https://flagicons.lipis.dev/)<br/>
 -   License: [MIT](https://github.com/lipis/flag-icon-css/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `fi` <br/>
-        Import: `@inkline/icons/build/packs/flag/4x3`
+        Import: `@inkline/icons/packs/flag/4x3`
     -   Prefix: `fis` <br/>
-        Import: `@inkline/icons/build/packs/flag/1x1`
+        Import: `@inkline/icons/packs/flag/1x1`
     -   Prefix: `*` <br/>
-        Import: `@inkline/icons/build/packs/flag`
+        Import: `@inkline/icons/packs/flag`
 
 [**Heroicons**](https://heroicons.com/)<br/>
 -   License: [MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `his` <br/>
-        Import: `@inkline/icons/build/packs/heroicons/solid`
+        Import: `@inkline/icons/packs/heroicons/solid`
     -   Prefix: `hio` <br/>
-        Import: `@inkline/icons/build/packs/heroicons/outline`
+        Import: `@inkline/icons/packs/heroicons/outline`
     -   Prefix: `*` <br/>
-        Import: `@inkline/icons/build/packs/heroicons`
+        Import: `@inkline/icons/packs/heroicons`
 
 [**Inkline**](https://inkline.io/)<br/>
 -   License: [MIT](https://github.com/inkline/inkline/blob/master/packages/inkline/LICENSE)<br/>
 -   Variants:
     -   Prefix: `ink` <br/>
-        Import: `@inkline/icons/build/packs/inkline`
+        Import: `@inkline/icons/packs/inkline`
 
 [**Ionicons**](https://ionicons.com/)<br/>
 -   License: [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `ion` <br/>
-        Import: `@inkline/icons/build/packs/ionicons`
+        Import: `@inkline/icons/packs/ionicons`
 
 [**Line Awesome**](https://icons8.com/line-awesome)<br/>
 -   License: [MIT](https://github.com/icons8/line-awesome/blob/master/LICENSE.md)<br/>
 -   Variants:
     -   Prefix: `la` <br/>
-        Import: `@inkline/icons/build/packs/lineawesome`
+        Import: `@inkline/icons/packs/lineawesome`
 
 [**Material Design Icons**](https://fonts.google.com/icons)<br/>
 -   License: [Apache 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `mdi` <br/>
-        Import: `@inkline/icons/build/packs/material-design`
+        Import: `@inkline/icons/packs/material-design`
 
 [**Primer Octicons**](https://primer.style/octicons)<br/>
 -   License: [MIT](https://github.com/primer/octicons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `oi` <br/>
-        Import: `@inkline/icons/build/packs/octicons`
+        Import: `@inkline/icons/packs/octicons`
 
 [**Pixelart Icons**](https://pixelarticons.com/)<br/>
 -   License: [MIT](https://github.com/halfmage/pixelarticons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `px` <br/>
-        Import: `@inkline/icons/build/packs/pixelart`
+        Import: `@inkline/icons/packs/pixelart`
 
 [**Prime Icons**](http://primefaces.org/showcase/icons.xhtml)<br/>
 -   License: [MIT](https://github.com/primefaces/primeicons/blob/master/LICENSE)<br/>
 -   Variants:
     -   Prefix: `pi` <br/>
-        Import: `@inkline/icons/build/packs/prime`
+        Import: `@inkline/icons/packs/prime`
 
 [**Remix Icon**](https://remixicon.com/)<br/>
 -   License: [Apache 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License)<br/>
 -   Variants:
     -   Prefix: `ri` <br/>
-        Import: `@inkline/icons/build/packs/remix`
+        Import: `@inkline/icons/packs/remix`
 
 [**Simple Icons**](https://simpleicons.org/)<br/>
 -   License: [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md)<br/>
 -   Variants:
     -   Prefix: `si` <br/>
-        Import: `@inkline/icons/build/packs/simple`
+        Import: `@inkline/icons/packs/simple`
 
 
 ## Bugs and feature requests
