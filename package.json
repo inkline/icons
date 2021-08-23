@@ -10,7 +10,7 @@
         "dist:plugin": "vite build",
         "dist:packs": "node -r esbuild-register scripts/dist.ts",
         "dist": "npm run build && npm run dist:plugin && npm run dist:packs",
-        "build:ts:compile": "tsc -d -p tsconfig.json",
+        "build:ts:compile": "tsc -d -p tsconfig.json && tsconfig-replace-paths --project tsconfig.json",
         "build:ts:copy": "bash -c 'rsync -am --include=\"*.\"{vue,scss} --include=\"*/\" --exclude=\"*\" src/ lib/'",
         "build:ts:replace": "bash -c 'find lib -type f -name *.vue -exec perl -i -pe\"s/.ts\\\" lang=\\\"ts\\\"/.js\\\"/g\" {} +'",
         "build:ts": "npm run build:ts:compile && npm run build:ts:copy && npm run build:ts:replace",
@@ -18,8 +18,11 @@
         "generate:version": "node -r esbuild-register scripts/version.ts",
         "generate:icons": "node -r esbuild-register scripts/generate.ts",
         "generate:exports": "node -r esbuild-register scripts/exports.ts",
-        "generate": "npm run generate:exports && npm run generate:version && npm run generate:icons",
-        "prepublishOnly": "npm run build",
+        "generate": "npm run generate:version && npm run generate:icons",
+        "prerelease": "npm run dist && ts-node scripts/prepublish.ts",
+        "release": "np",
+        "postrelease": "ts-node scripts/postpublish.ts",
+        "postversion": "ts-node scripts/postversion.ts",
         "test": "jest",
         "test:dev": "jest --watch"
     },
@@ -35,6 +38,7 @@
         "@primer/octicons": "13.0.0",
         "@testing-library/jest-dom": "^5.12.0",
         "@types/estree": "0.0.47",
+        "@types/fs-extra": "^9.0.12",
         "@types/glob": "^7.1.3",
         "@types/jest": "^26.0.23",
         "@types/node": "^15.0.1",
@@ -52,6 +56,7 @@
         "eslint-plugin-vue": "^7.9.0",
         "flag-icon-css": "3.5.0",
         "flat-color-icons": "1.1.0",
+        "fs-extra": "^10.0.0",
         "glob": "^7.1.6",
         "heroicons": "1.0.1",
         "ionicons": "5.5.1",
@@ -69,6 +74,7 @@
         "svgson": "^5.2.1",
         "ts-jest": "^26.5.6",
         "ts-node": "^9.1.1",
+        "tsconfig-replace-paths": "^0.0.5",
         "typescript": "^4.1.3",
         "vite": "^2.2.3",
         "vue": "^3.0.5",
@@ -76,13 +82,7 @@
         "vue-tsc": "^0.0.24"
     },
     "files": [
-        "lib",
-        "dist",
-        "src",
-        "scripts",
-        "README.md",
-        "LICENSE",
-        "tsconfig.json"
+        "**/*"
     ],
     "keywords": [
         "vuejs",
@@ -112,185 +112,5 @@
         "type": "git",
         "url": "https://github.com/inkline/icons"
     },
-    "license": "MIT",
-    "exports": {
-        ".": {
-            "import": "./lib/index.js",
-            "require": "./dist/icons.umd.js",
-            "sass": "./lib/index.scss",
-            "style": "./dist/style.css"
-        },
-        "./config": {
-            "import": "./lib/config.js"
-        },
-        "./version": {
-            "import": "./lib/version.js"
-        },
-        "./plugin": {
-            "import": "./lib/plugin.js"
-        },
-        "./packs": {
-            "import": "./lib/packs/index.js",
-            "sass": "./lib/packs/index.scss"
-        },
-        "./packs/": {
-            "import": "./lib/packs/",
-            "sass": "./lib/packs/"
-        },
-        "./components": {
-            "import": "./lib/components/index.js",
-            "sass": "./lib/components/index.scss"
-        },
-        "./controllers": {
-            "import": "./lib/controllers/index.js"
-        },
-        "./helpers": {
-            "import": "./lib/helpers/index.js"
-        },
-        "./packs/bootstrap": {
-            "import": "./lib/packs/bootstrap.js",
-            "require": "./dist/packs/bootstrap.umd.js",
-            "sass": "./lib/packs/bootstrap.scss"
-        },
-        "./packs/coreui": {
-            "import": "./lib/packs/coreui/index.js",
-            "require": "./dist/packs/coreui/index.umd.js",
-            "sass": "./lib/packs/coreui/index.scss"
-        },
-        "./packs/coreui/brands": {
-            "import": "./lib/packs/coreui/brands.js",
-            "require": "./dist/packs/coreui/brands.umd.js",
-            "sass": "./lib/packs/coreui/brands.scss"
-        },
-        "./packs/coreui/flag": {
-            "import": "./lib/packs/coreui/flag.js",
-            "require": "./dist/packs/coreui/flag.umd.js",
-            "sass": "./lib/packs/coreui/flag.scss"
-        },
-        "./packs/coreui/linear": {
-            "import": "./lib/packs/coreui/linear.js",
-            "require": "./dist/packs/coreui/linear.umd.js",
-            "sass": "./lib/packs/coreui/linear.scss"
-        },
-        "./packs/cryptocurrency": {
-            "import": "./lib/packs/cryptocurrency/index.js",
-            "require": "./dist/packs/cryptocurrency/index.umd.js",
-            "sass": "./lib/packs/cryptocurrency/index.scss"
-        },
-        "./packs/cryptocurrency/regular": {
-            "import": "./lib/packs/cryptocurrency/regular.js",
-            "require": "./dist/packs/cryptocurrency/regular.umd.js",
-            "sass": "./lib/packs/cryptocurrency/regular.scss"
-        },
-        "./packs/cryptocurrency/color": {
-            "import": "./lib/packs/cryptocurrency/color.js",
-            "require": "./dist/packs/cryptocurrency/color.umd.js",
-            "sass": "./lib/packs/cryptocurrency/color.scss"
-        },
-        "./packs/cryptocurrency/icon": {
-            "import": "./lib/packs/cryptocurrency/icon.js",
-            "require": "./dist/packs/cryptocurrency/icon.umd.js",
-            "sass": "./lib/packs/cryptocurrency/icon.scss"
-        },
-        "./packs/fontawesome": {
-            "import": "./lib/packs/fontawesome/index.js",
-            "require": "./dist/packs/fontawesome/index.umd.js",
-            "sass": "./lib/packs/fontawesome/index.scss"
-        },
-        "./packs/fontawesome/brands": {
-            "import": "./lib/packs/fontawesome/brands.js",
-            "require": "./dist/packs/fontawesome/brands.umd.js",
-            "sass": "./lib/packs/fontawesome/brands.scss"
-        },
-        "./packs/fontawesome/regular": {
-            "import": "./lib/packs/fontawesome/regular.js",
-            "require": "./dist/packs/fontawesome/regular.umd.js",
-            "sass": "./lib/packs/fontawesome/regular.scss"
-        },
-        "./packs/fontawesome/solid": {
-            "import": "./lib/packs/fontawesome/solid.js",
-            "require": "./dist/packs/fontawesome/solid.umd.js",
-            "sass": "./lib/packs/fontawesome/solid.scss"
-        },
-        "./packs/flat-color": {
-            "import": "./lib/packs/flat-color.js",
-            "require": "./dist/packs/flat-color.umd.js",
-            "sass": "./lib/packs/flat-color.scss"
-        },
-        "./packs/flag": {
-            "import": "./lib/packs/flag/index.js",
-            "require": "./dist/packs/flag/index.umd.js",
-            "sass": "./lib/packs/flag/index.scss"
-        },
-        "./packs/flag/4x3": {
-            "import": "./lib/packs/flag/4x3.js",
-            "require": "./dist/packs/flag/4x3.umd.js",
-            "sass": "./lib/packs/flag/4x3.scss"
-        },
-        "./packs/flag/1x1": {
-            "import": "./lib/packs/flag/1x1.js",
-            "require": "./dist/packs/flag/1x1.umd.js",
-            "sass": "./lib/packs/flag/1x1.scss"
-        },
-        "./packs/heroicons": {
-            "import": "./lib/packs/heroicons/index.js",
-            "require": "./dist/packs/heroicons/index.umd.js",
-            "sass": "./lib/packs/heroicons/index.scss"
-        },
-        "./packs/heroicons/solid": {
-            "import": "./lib/packs/heroicons/solid.js",
-            "require": "./dist/packs/heroicons/solid.umd.js",
-            "sass": "./lib/packs/heroicons/solid.scss"
-        },
-        "./packs/heroicons/outline": {
-            "import": "./lib/packs/heroicons/outline.js",
-            "require": "./dist/packs/heroicons/outline.umd.js",
-            "sass": "./lib/packs/heroicons/outline.scss"
-        },
-        "./packs/inkline": {
-            "import": "./lib/packs/inkline.js",
-            "require": "./dist/packs/inkline.umd.js",
-            "sass": "./lib/packs/inkline.scss"
-        },
-        "./packs/ionicons": {
-            "import": "./lib/packs/ionicons.js",
-            "require": "./dist/packs/ionicons.umd.js",
-            "sass": "./lib/packs/ionicons.scss"
-        },
-        "./packs/lineawesome": {
-            "import": "./lib/packs/lineawesome.js",
-            "require": "./dist/packs/lineawesome.umd.js",
-            "sass": "./lib/packs/lineawesome.scss"
-        },
-        "./packs/material-design": {
-            "import": "./lib/packs/material-design.js",
-            "require": "./dist/packs/material-design.umd.js",
-            "sass": "./lib/packs/material-design.scss"
-        },
-        "./packs/octicons": {
-            "import": "./lib/packs/octicons.js",
-            "require": "./dist/packs/octicons.umd.js",
-            "sass": "./lib/packs/octicons.scss"
-        },
-        "./packs/pixelart": {
-            "import": "./lib/packs/pixelart.js",
-            "require": "./dist/packs/pixelart.umd.js",
-            "sass": "./lib/packs/pixelart.scss"
-        },
-        "./packs/prime": {
-            "import": "./lib/packs/prime.js",
-            "require": "./dist/packs/prime.umd.js",
-            "sass": "./lib/packs/prime.scss"
-        },
-        "./packs/remix": {
-            "import": "./lib/packs/remix.js",
-            "require": "./dist/packs/remix.umd.js",
-            "sass": "./lib/packs/remix.scss"
-        },
-        "./packs/simple": {
-            "import": "./lib/packs/simple.js",
-            "require": "./dist/packs/simple.umd.js",
-            "sass": "./lib/packs/simple.scss"
-        }
-    }
+    "license": "MIT"
 }
