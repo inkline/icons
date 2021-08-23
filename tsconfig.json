@@ -4,12 +4,14 @@
         "module": "esnext",
         "moduleResolution": "node",
         "outDir": "lib",
-        "baseUrl": "./src",
+        "baseUrl": ".",
+        "rootDir": "./src",
         "strict": true,
         "jsx": "preserve",
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "paths": {},
         "lib": [
             "esnext",
             "dom"
@@ -25,5 +27,11 @@
         "src/**/*.d.ts",
         "src/**/*.tsx",
         "src/**/*.vue"
+    ],
+    "exclude": [
+        "dist",
+        "lib",
+        "package",
+        "node_modules"
     ]
 }
