@@ -27,6 +27,10 @@ const copy = [
         to: path.resolve(packageFolder, 'dist')
     },
     {
+        from: path.resolve(__dirname, '..', 'src'),
+        to: path.resolve(packageFolder, 'src')
+    },
+    {
         from: path.resolve(__dirname, '..', 'README.md'),
         to: path.resolve(packageFolder, 'README.md')
     },
