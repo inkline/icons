@@ -3,8 +3,10 @@
     "description": "Inkline Icons provides you with an awesome, maintainable Universal Vue.js 3 Icon Component with thousands of icons from more than 15 icon packs.",
     "version": "1.4.13",
     "iconsVersion": "1.0.0",
-    "main": "index.js",
+    "main": "dist/icons.es.js",
     "module": "index.js",
+    "jsdelivr": "dist/icons.umd.js",
+    "unpkg": "dist/icons.umd.js",
     "types": "index.d.ts",
     "scripts": {
         "dist:plugin": "vite build",
