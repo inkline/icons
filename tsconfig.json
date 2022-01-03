@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "module": "commonjs",
+        "module": "esnext",
         "moduleResolution": "node",
         "outDir": "lib",
         "baseUrl": ".",
@@ -11,7 +11,9 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
-        "paths": {},
+        "paths": {
+            "@inkline/icons/*": ["./src/*"]
+        },
         "lib": [
             "esnext",
             "dom"
