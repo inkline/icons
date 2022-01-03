@@ -16,7 +16,7 @@
         "build:ts:compile:mjs": "tsc -d -p tsconfig.mjs.json && mjscjs -p tsconfig.mjs.json",
         "build:ts:compile": "npm run build:ts:compile:cjs && npm run build:ts:compile:mjs",
         "build:ts:lib:copy": "cp -r lib-cjs/* lib && cp -r lib-mjs/* lib && rimraf lib-cjs lib-mjs && bash -c 'rsync -am --include=\"*.\"{vue,scss} --include=\"*/\" --exclude=\"*\" src/ lib/'",
-        "build:ts:lib:replace": "bash -c 'find lib -type f -name *.vue -exec perl -i -pe\"s/.ts\\\" lang=\\\"ts\\\"/.js\\\"/g\" {} +'",
+        "build:ts:lib:replace": "bash -c 'find lib -type f -name *.vue -exec perl -i -pe\"s/.ts\\\" lang=\\\"ts\\\"/.mjs\\\"/g\" {} +'",
         "build:ts:lib": "rimraf lib && mkdir lib && npm run build:ts:lib:copy && npm run build:ts:lib:replace",
         "build:ts": "npm run build:ts:compile && npm run build:ts:lib",
         "build": "npm run generate && npm run build:ts",
